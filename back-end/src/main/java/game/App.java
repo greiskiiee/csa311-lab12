@@ -2,6 +2,7 @@ package game;
 
 import java.io.IOException;
 import java.util.Map;
+
 import fi.iki.elonen.NanoHTTPD;
 
 public class App extends NanoHTTPD {
@@ -18,10 +19,11 @@ public class App extends NanoHTTPD {
 
     /**
      * Start the server at :8080 port.
+     *
      * @throws IOException
      */
     public App() throws IOException {
-        super(8080);
+        super(8090);
 
         this.game = new Game();
 
@@ -45,6 +47,7 @@ public class App extends NanoHTTPD {
     }
 
     public static class Test {
+
         public String getText() {
             return "Hello World!";
         }
